@@ -1,0 +1,6 @@
+@use "../_utilities/variables" as *;
+
+body {
+  font-family: $font-primary;
+  overflow: hidden;
+}

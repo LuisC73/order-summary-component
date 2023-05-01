@@ -1,0 +1,112 @@
+@use "../_utilities/variables" as *;
+@use "../_utilities/mixins" as *;
+
+.order-summary {
+  min-height: 100vh;
+  background-color: $color-primary;
+  @include flex(center, center, column, 0);
+
+  &__card {
+    width: 85%;
+    min-width: 278px;
+    max-width: 340px;
+    height: 490px;
+    border-radius: 12px;
+    background-color: $color-white;
+    overflow: hidden;
+    box-shadow: rgba($color: $color-neutral-secundary, $alpha: 0.3) 0px 3px 8px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 155px;
+  }
+
+  &__content {
+    padding: 18px 25px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: $color-neutral-terciary;
+  }
+
+  &__p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: $color-neutral-secundary;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 40px 80px auto;
+    align-items: center;
+    gap: 8px;
+
+    @include responsive("Tablet") {
+      padding: 0 25px;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 40px;
+    background: url("../images/icon-music.svg") center/contain no-repeat;
+  }
+
+  &__a {
+    justify-self: end;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: $color-secundary;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-neutral-secundary;
+    }
+  }
+
+  &__plan-text {
+    font-size: 1.3rem;
+    line-height: 0.8rem;
+    color: $color-neutral-secundary;
+
+    &--bold {
+      color: $color-neutral-terciary;
+      font-weight: 900;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.5s;
+    @include flex(center, center, column, 0);
+
+    &--primary {
+      margin-top: 20px;
+      background-color: $color-secundary;
+      box-shadow: rgba($color: $color-secundary, $alpha: 0.5) 0px 3px 8px;
+      color: $color-white;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &--secundary {
+      margin-top: 10px;
+      color: $color-neutral-secundary;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}
