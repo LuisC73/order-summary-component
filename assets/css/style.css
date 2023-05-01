@@ -259,7 +259,7 @@ body {
   width: 85%;
   min-width: 278px;
   max-width: 340px;
-  height: 490px;
+  height: 505px;
   border-radius: 12px;
   background-color: #fff;
   overflow: hidden;
@@ -293,10 +293,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: hsl(225deg, 100%, 98%);
 }
 @media (min-width: 481px) {
   .order-summary__wrapper {
-    padding: 0 25px;
+    padding: 10px 25px;
   }
 }
 .order-summary__icon {
